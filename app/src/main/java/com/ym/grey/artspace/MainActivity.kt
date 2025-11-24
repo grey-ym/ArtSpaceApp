@@ -25,7 +25,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -38,6 +38,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ym.grey.artspace.data.Art
 import com.ym.grey.artspace.ui.theme.ArtSpaceTheme
 import com.ym.grey.artspace.ui.theme.ImgInfoBg
 
@@ -60,12 +61,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// Class to keep image data
-class Art(val image: Int, val title: Int, val artist: Int, val year: Int)
-
 @Composable
 fun ArtSpaceApp(modifier: Modifier = Modifier) {
-    var pageNumber by remember { mutableStateOf(1) }
+    var pageNumber by remember { mutableIntStateOf(1) }
     val art = findArt(pageNumber)
 
     Column(
@@ -75,7 +73,7 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
     ) {
 
         ArtImage(art.image)
-        ArtInfo(art, modifier = Modifier.padding(top = 40.dp).background(color = ImgInfoBg))
+        ArtInfo(modifier = Modifier.padding(top = 40.dp).background(color = ImgInfoBg), art)
 
         // Navigation buttons
         Row(
@@ -86,13 +84,15 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
                 .padding(vertical = 30.dp, horizontal = 10.dp)
         ) {
             NavigationButton(
-                R.string.previous,
-                pageNumber > 1
+                modifier = Modifier,
+                text = R.string.previous,
+                isEnabled = pageNumber > 1
             ) {
                 if (pageNumber > 1) pageNumber--
             }
             NavigationButton(
-                if (pageNumber < 20) R.string.next else R.string.finish
+                modifier = Modifier,
+                text = if (pageNumber < 20) R.string.next else R.string.finish
             ) {
                 if (pageNumber >= 20) pageNumber = 1 else pageNumber++
             }
@@ -113,13 +113,13 @@ fun ArtImagePreview() {
 @Composable
 fun ArtInfoPreview() {
     ArtInfo(
+        modifier = Modifier.padding(30.dp).background(color = ImgInfoBg),
         Art(
             image = R.drawable.img_1,
             title = R.string.img_1_title,
             artist = R.string.img_1_artist,
             year = R.string.img_1_year
-        ),
-        modifier = Modifier.padding(30.dp).background(color = ImgInfoBg)
+        )
     )
 }
 
@@ -147,8 +147,8 @@ fun ArtImage(
 
 @Composable
 fun ArtInfo(
-    artData: Art,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    artData: Art
 ) {
     Box(modifier = modifier) {
         Column(
@@ -180,9 +180,9 @@ fun ArtInfo(
 
 @Composable
 fun NavigationButton(
+    modifier: Modifier = Modifier,
     @StringRes text: Int,
     isEnabled: Boolean = true,
-    modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
     Button(
@@ -196,6 +196,7 @@ fun NavigationButton(
     }
 }
 
+// Returns image data
 private fun findArt(page: Int): Art {
     return when(page) {
         1 -> Art(image = R.drawable.img_1, title = R.string.img_1_title, artist = R.string.img_1_artist, year = R.string.img_1_year)
