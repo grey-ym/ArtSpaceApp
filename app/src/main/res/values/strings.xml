@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Art Space</string>
+
+    <!-- Buttons -->
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+
+    <!-- Art Images -->
+    <string name="img_1_title">Winter Snow Throw</string>
+    <string name="img_2_title">Reaching Through Water</string>
+    <string name="img_3_title">Eagle Carrying Travelers</string>
+    <string name="img_4_title">Sailing Through Stars</string>
+    <string name="img_5_title">Cozy Cub Companions</string>
+    <string name="img_6_title">Releasing Sky Lights</string>
+    <string name="img_7_title">River of Candles</string>
+    <string name="img_8_title">Fish Tornado</string>
+    <string name="img_9_title">Deserted Bottle Ship</string>
+    <string name="img_10_title">Dinosaur Skull</string>
+    <string name="img_11_title">Reflected Library Hall</string>
+    <string name="img_12_title">Boat of Love</string>
+    <string name="img_13_title">Ocean Cliff Drift</string>
+    <string name="img_14_title">Flying Espresso</string>
+    <string name="img_15_title">Staircase Perspective</string>
+    <string name="img_16_title">Holding the Moon</string>
+    <string name="img_17_title">Northern Lights View</string>
+    <string name="img_18_title">Standing by Falls</string>
+    <string name="img_19_title">Turtle Island Illusion</string>
+    <string name="img_20_title">Fierce Bond</string>
+
+    <!-- Art Titles -->
+    <string name="img_1_artist">Alex Porter</string>
+    <string name="img_2_artist">Maya Collins</string>
+    <string name="img_3_artist">Victor Hale</string>
+    <string name="img_4_artist">Lena Brooks</string>
+    <string name="img_5_artist">Daniel Mercer</string>
+    <string name="img_6_artist">Sofia Grant</string>
+    <string name="img_7_artist">Ethan Rowe</string>
+    <string name="img_8_artist">Clara Dawson</string>
+    <string name="img_9_artist">Mark Ellison</string>
+    <string name="img_10_artist">Julia Trent</string>
+    <string name="img_11_artist">Owen Parker</string>
+    <string name="img_12_artist">Nina Walters</string>
+    <string name="img_13_artist">Ryan Mercer</string>
+    <string name="img_14_artist">Alina Foster</string>
+    <string name="img_15_artist">Lucas Monroe</string>
+    <string name="img_16_artist">Emma Carlisle</string>
+    <string name="img_17_artist">Aaron Blake</string>
+    <string name="img_18_artist">Talia Reeves</string>
+    <string name="img_19_artist">Kevin Hartman</string>
+    <string name="img_20_artist">Mira Dalton</string>
+
+    <!-- Art Released Years -->
+    <string name="img_1_year">2003</string>
+    <string name="img_2_year">1993</string>
+    <string name="img_3_year">1990</string>
+    <string name="img_4_year">2013</string>
+    <string name="img_5_year">2000</string>
+    <string name="img_6_year">1994</string>
+    <string name="img_7_year">2008</string>
+    <string name="img_8_year">1990</string>
+    <string name="img_9_year">2002</string>
+    <string name="img_10_year">2009</string>
+    <string name="img_11_year">2013</string>
+    <string name="img_12_year">2003</string>
+    <string name="img_13_year">2005</string>
+    <string name="img_14_year">2010</string>
+    <string name="img_15_year">2005</string>
+    <string name="img_16_year">2003</string>
+    <string name="img_17_year">2016</string>
+    <string name="img_18_year">2012</string>
+    <string name="img_19_year">2001</string>
+    <string name="img_20_year">2019</string>
+</resources>
